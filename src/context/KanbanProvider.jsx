@@ -9,7 +9,7 @@ export const KanbanProvider = ({ children }) => {
     const [ boardData, dispatch ] = useReducer(KanbanReducer, initialTasks);
 
     const addTask = (task) => dispatch({ type: "ADD_TASK", payload: task });
-    const deleteTask = (id) => dispatch({ type: "DELETE_TASK", payload: id });
+    const deleteTask = (id) => dispatch({ type: "DELETE_TASK", payload: {id} });
     const editTask = (id, updatedTask) => dispatch({ type: "EDIT_TASK", payload: {id, updatedTask} });
     const moveTask = (id, toColumn) => dispatch({ type: "MOVE_TASK", payload: {id, toColumn} });
     

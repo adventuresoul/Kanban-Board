@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useRef, memo, useState } from "react";
 import { KanbanContext } from "../context/KanbanContext";
 
-function TaskAdderForm({ column }) {
+function TaskAdderForm({ column }) { 
     const ref = useRef(null);
 
     const { addTask } = useContext(KanbanContext);
